@@ -3,19 +3,35 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
       /*
-       * Taking input from user
-       * Store the value in a variable
+       * Calculate the Cumulative Grade Points Average is the CGPA Grades of Subjects are given as 9, 8, 7, 8, 8?
+       * Also convert CGPA to Percentage
        */
-      Scanner input = new Scanner(System.in) ; // Scanner class
-      System.out.println("Enter the age of user");
-      byte number = input.nextByte() ; // 25
-      boolean b1 = input.hasNextByte(); // its use to check authenticity of variable
-      System.out.println(b1);
-      System.out.println("The age of user " + number); // 25
+      Scanner marksInput = new Scanner(System.in) ;
+      // Taking marks of all subject
+      System.out.println("Physics Marks: ");
+      byte physicsMarks = marksInput.nextByte();
+      System.out.println("Maths Marks: ");
+      byte mathsMarks = marksInput.nextByte() ;
+      System.out.println("English Marks: ");
+      byte englishMarks = marksInput.nextByte();
+      System.out.println("Chemistry Marks: ");
+      byte chemistryMarks = marksInput.nextByte() ;
+      System.out.println("Biology Marks: ");
+      byte bioMarks = marksInput.nextByte() ;
 
-      String str = input.next() ; // its only pick one word
-      String strLine = input.nextLine(); // it prints the sentences
-      System.out.println(strLine);
+      //  Total Sum
+      int sum = physicsMarks + mathsMarks + englishMarks + chemistryMarks + bioMarks ;
+      System.out.println("Total: " + sum);
+
+      // Find CGPA
+      int CGPA = sum / 5 ;
+      System.out.println("CGPA: " + CGPA);
+
+      // Converting CGPA to Percentage
+      double percentage = CGPA * 9.5 ;
+      System.out.println("Percentage: " + percentage);
+
+
     }
 }
 
