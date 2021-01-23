@@ -2,17 +2,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-      /*
-       * WAP to detect whether a number entered by the user is integer or not
-       */
 
-    Scanner input = new Scanner(System.in) ;
-      System.out.println("User please enter something: ");
-    boolean isInteger = input.hasNextInt() ;
-      System.out.println("Its integer ?");
-    System.out.println("Analyzing ....");
-      System.out.println(isInteger);
-
+        // Assignment Operators
+        int a = 6 ;
+        int b = a + 4 ;
+        b += 7 ;
+        b *= 50 ;
+        b %= 4 ; // Modulo operator
+        System.out.println(b);
 
     }
 }
