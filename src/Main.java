@@ -12,6 +12,9 @@ public class Main {
         long dinoAge = 5666666666666L ;
         System.out.println(age);
         System.out.println(ch);
+
+        String name = "Faisal" ;
+        System.out.println(name);
     }
 }
 
