@@ -3,17 +3,24 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-       // Bitwise Operator
+       // Precedence and Associativity
+
+        int a = 6 * 4 + 10 / 5 ;
         /*
-        * 2 --- 10 in Binary
-        * 3 --- 11 in Binary
-        * AND ------
-        *       10 --> 2
-        * OR --------
-        *        11 --> 3
-        * */
-        System.out.println(2 & 3);
-        System.out.println(2 | 3);
+        6 * 4 = 24 + 10 / 5
+        10 / 5 = 2
+        24 + 2
+        = 26
+         */
+        System.out.println(a); // 26
+
+        int b = 60 / 5 - 34 * 2 ;
+        /*
+        12 - 34 * 2
+        = 12 - 68
+        = -56
+         */
+        System.out.println(b); // -56
 
     }
 }
