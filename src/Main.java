@@ -1,15 +1,17 @@
 public class Main {
     public static void main(String[] args) {
-      // Quiz WAP to add three number
-
-        int num1 = 60;
-        int num2 = 2 ;
-        int num3 = 6 ;
-
-        System.out.println(num1 + num2 + num3);
-
-        double resultOfInt = -(Math.pow(2,8) / 2 )  ;
-        System.out.println(resultOfInt);
+      // Literals in java
+      byte age = 34 ;
+      /*
+      * Here 34 is our Literal
+      * */
+        char ASCII_ch = 90 ;
+        char  ch = 'A';
+        float f1 = 5.6f ;
+        double d1 = 4.53D ;
+        long dinoAge = 5666666666666L ;
+        System.out.println(age);
+        System.out.println(ch);
     }
 }
 
