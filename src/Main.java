@@ -3,9 +3,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-       // Logical Operator
-        System.out.println(65 > 7 && 0 != 1);
-        System.out.println(54 == 45 || 5 == 5 );
+       // Bitwise Operator
+        /*
+        * 2 --- 10 in Binary
+        * 3 --- 11 in Binary
+        * AND ------
+        *       10 --> 2
+        * OR --------
+        *        11 --> 3
+        * */
+        System.out.println(2 & 3);
+        System.out.println(2 | 3);
 
     }
 }
