@@ -7,6 +7,8 @@ public class Main {
 
         int a = 6 * 4 + 10 / 5 ;
         /*
+        highest Precedence goes to * and /. They are then evaluated on the basis of left to right
+        Associativity
         6 * 4 = 24 + 10 / 5
         10 / 5 = 2
         24 + 2
