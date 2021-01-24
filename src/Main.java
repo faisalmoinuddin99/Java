@@ -3,19 +3,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-      // Question 2
+      // Strings Chapter 3
         /*
-        WAP to encrypt a grade by adding 8 to it. Decrypt it
-        to show the correct grade
-
+        Two ways :
+        1. String name = new String("faisal");
+        2. String name = "Faisal"
          */
-        Scanner sc = new Scanner(System.in) ;
-        System.out.println("Please enter your grade :");
-        char grade = sc.next().charAt(0) ;
-        grade += 8 ; // encryption
-        System.out.println("Encrypted Grade: " + grade );
-        grade -= 8 ; // decryption
-        System.out.println("Decrypted Grade: " + grade);
+
+        String name = new String("Faisal") ;
+        String age = "21" ;
+
+        System.out.println(name + " " + age);
     }
 }
 
