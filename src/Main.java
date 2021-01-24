@@ -3,33 +3,30 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-       // Precedence and Associativity
+        // Data Type of Expressions & Increment / Decrement Operator
+        /*
+        1. byte + short -> int
+        2. short + int -> int
+        3. long + float -> float
+        4. int + float -> float
+        5. char + int -> int
+        6. char + short -> int
+        7. long + double -> double
+        8. float + double -> double
+         */
+        float a = 6.54f + 6 ;
+        System.out.println(a);
 
-       /*
-       How will you write the following expressions in Java ?
+        // Increment and Decrement Operator
+        int i = 56;
+        System.out.println(i ++); // 56
+        System.out.println(i); // 57
+        System.out.println(++ i); // 58
+        System.out.println(i --); // 58
+        System.out.println(i); // 57
+        System.out.println(-- i); // 56
 
-       x-y / 2, b ^2 - 4 a c / 2 a, v^2 - u^2, a * b - d
-        */
 
-        double x = 3 ;
-        double y = 6 ;
-        double questionOne = (x - y) / 2 ;
-        System.out.println(questionOne);
-
-        double b = 6 ;
-        double a = 3 ;
-        double c = 7 ;
-        double questionTwo = (Math.pow(b,2) - 4 * a * c ) / 2 * a ;
-        System.out.println(questionTwo);
-
-        double v = 45 ;
-        double u = 89 ;
-        double questionThree = (Math.pow(v,2) - Math.pow(u,2)) ;
-        System.out.println(questionThree);
-
-        double d = 7 ;
-        double questionFour = a * b - d ;
-        System.out.println(questionFour);
     }
 }
 
