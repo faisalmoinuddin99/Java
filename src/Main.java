@@ -5,25 +5,31 @@ public class Main {
 
        // Precedence and Associativity
 
-        int a = 6 * 4 + 10 / 5 ;
-        /*
-        highest Precedence goes to * and /. They are then evaluated on the basis of left to right
-        Associativity
-        6 * 4 = 24 + 10 / 5
-        10 / 5 = 2
-        24 + 2
-        = 26
-         */
-        System.out.println(a); // 26
+       /*
+       How will you write the following expressions in Java ?
 
-        int b = 60 / 5 - 34 * 2 ;
-        /*
-        12 - 34 * 2
-        = 12 - 68
-        = -56
-         */
-        System.out.println(b); // -56
+       x-y / 2, b ^2 - 4 a c / 2 a, v^2 - u^2, a * b - d
+        */
 
+        double x = 3 ;
+        double y = 6 ;
+        double questionOne = (x - y) / 2 ;
+        System.out.println(questionOne);
+
+        double b = 6 ;
+        double a = 3 ;
+        double c = 7 ;
+        double questionTwo = (Math.pow(b,2) - 4 * a * c ) / 2 * a ;
+        System.out.println(questionTwo);
+
+        double v = 45 ;
+        double u = 89 ;
+        double questionThree = (Math.pow(v,2) - Math.pow(u,2)) ;
+        System.out.println(questionThree);
+
+        double d = 7 ;
+        double questionFour = a * b - d ;
+        System.out.println(questionFour);
     }
 }
 
