@@ -5,15 +5,19 @@ public class Main {
 
       // Strings Chapter 3
         /*
-        Two ways :
-        1. String name = new String("faisal");
-        2. String name = "Faisal"
+        Different ways to print the values
+         */
+        byte age = 21 ;
+        String name = "Faisal" ;
+        System.out.printf("Name is %s and his age is %d",name, age);
+
+        /*
+        Here %d is Format Specifier
+        %s format specifier for string
          */
 
-        String name = new String("Faisal") ;
-        String age = "21" ;
-
-        System.out.println(name + " " + age);
+        double salary = 2.50 ;
+        System.out.format("The salary is %f", salary);
     }
 }
 
