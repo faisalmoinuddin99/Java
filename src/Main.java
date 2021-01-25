@@ -3,59 +3,53 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-     /*
-     String Methods :
-      */
-        String name = "Faisal" ;
-        int value = name.length() ;
-        System.out.println(value); // 6
-
-        String lowerCase = name.toLowerCase() ;
-        System.out.println(lowerCase);
-
-        String uCase = name.toUpperCase();
-        System.out.println(uCase);
-
-       String nonTrimmedString = "       faisal     ";
-        System.out.println(nonTrimmedString);
-        System.out.println(nonTrimmedString.trim());
-
-        System.out.println(name.substring(2)); // isal
-
-        /*
-        substring(start index, end index )
-        . start index is included
-        . end index is excluded
-         */
-        System.out.println(name.substring(2,5)); // isa
-
-        String newName = "Harry" ;
-        System.out.println(newName); // Harry
-        System.out.println(newName.replace('r','p')); // Happy
-        System.out.println(newName.replace("rry","ier")); // Haier
-        System.out.println(newName.replace("r","ier")); // Haieriery
-
-        /*
-        startWith() -> return boolean
-         */
-        System.out.println(newName.startsWith("Ha")); // true
-        System.out.println(newName.endsWith("Ha")); //false
-
-        System.out.println(name.charAt(4)); // a
-
-        System.out.println(name.indexOf("sa"));
-
-        System.out.println(name.equals("Faisal")); // true
-        System.out.println(name.equals("faisal")); // false
-
-        System.out.println(name.equalsIgnoreCase("faisal")); // true
-        /*
-        its not having problem with any cases.
+   /*
+   Practice set
+    */
+        /* Question 1
+        Convert string to lower case
          */
 
-        System.out.println(name.equalsIgnoreCase("FaIsAl"));
+        String myString = "My name is Dog" ;
+        System.out.println(myString.toLowerCase()); // my name is dog
 
 
+        /*
+        Question 2
+        replace spaces with _
+         */
+
+        System.out.println(myString.replace(" ", "_")); // My_name_is_Dog
+
+        // Problem 3
+
+        String letterTemplate = "Dear <|name|>, Thanks a lot !" ;
+        letterTemplate = letterTemplate.replace("<|name|>", "Faisal") ;
+        System.out.println(letterTemplate);
+
+        /*
+        Problem 4
+        Detect double and triples spaces
+         */
+
+        String spaceDetector = "My string is having  double spaces and   Triple spaces";
+        System.out.println(spaceDetector.indexOf("  ")); // 19 i.e Double Space Detected
+        System.out.println(spaceDetector.indexOf("   ")); // 38 i.e Triple Space Detected
+        System.out.println(spaceDetector.indexOf("    ")); // -1 i.e Four Space Not Detected
+
+        /*
+        Problem 5
+        letter = "Dear Harry, this java course is nice. Thanks ! "
+         */
+
+        String myLetter =  "Dear Harry,\n\tThis java course is nice.\nThanks ! " ;
+        System.out.println(myLetter);
+        /*
+
+        output : Dear Harry,
+	                    This java course is nice.
+                 Thanks !
+        */
     }
 }
 
