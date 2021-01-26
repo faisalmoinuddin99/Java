@@ -2,54 +2,49 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+       /*
+       switch control Instruction
+
+       used to give user a choice
+        */
+
+        Scanner sc = new Scanner(System.in) ;
+        System.out.print("Enter your age:");
+        byte age = sc.nextByte();
+
+        switch (age){
+            case 18 :
+                System.out.println("You are becoming adult");
+                break;
+            case 23 :
+                System.out.println("Got your first job");
+                break ;
+            case 30 :
+                System.out.println("marrying someone");
+                break ;
+            case 35 :
+                System.out.println("becoming father");
+                break;
+            default:
+                System.out.println("Live life happily");
+        }
+        System.out.println("Thanks for using my java code");
+
         /*
-        Chapter 4 :
+        Enhance Switch
 
-        Relational and Logical Operator
+        switch(age) {
+        case 18 -> {
+         System.out.println("Got your first job");
+         System.out.println("Driving");
+        }
+        case 23 -> System.out.println("Got your first date");
+        case 60 -> System.out.println("Got your retired");
+        default -> System.out.println("Enjoy your life);
 
-        ==, >=, <=, >, <, !=
 
-        &&, ||, !
+        }
          */
-
-        // AND Operator ( && )
-        boolean x1 = true ;
-        boolean y1 = false ;
-
-        boolean x2 = true ;
-        boolean y2 = true ;
-
-        boolean x3 = false ;
-        boolean y3 = true ;
-
-        boolean x4 = false ;
-        boolean y4 = false ;
-
-        System.out.println(x1 && y1); // false
-        System.out.println(x2 && y2); // true
-        System.out.println(x3 && y3); // false
-        System.out.println(x4 && y4); // false
-
-//         OR Opeator ( || )
-
-        System.out.println(x1 || y1); // true
-        System.out.println(x2 || y2); // true
-        System.out.println(x3 || y3); // true
-        System.out.println(x4 || y4); // false
-
-        // NOT Operator (!)
-
-        System.out.println(!x1); // false
-        System.out.println(!x2); // false
-        System.out.println(!x3);// true
-        System.out.println(!x4); // true
-
-        System.out.println(!y1); // true
-        System.out.println(!y2); // true
-        System.out.println(!y3); // false
-        System.out.println(!y4); // true
-
-
     }
 }
 
