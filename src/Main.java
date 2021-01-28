@@ -4,13 +4,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
      /*
-     While Loop
+     do While Loop: Execute at least one time
+
+     while - check condition then execute
+     do while - execute then check condition
       */
-        int i = 1;
-        while (i <= 100){
-            System.out.print(i + " ");
-            i++;
-        }
+        int b = 10 ;
+        do{
+            System.out.println(b);
+            b++;
+        } while (b < 5) ;
     }
 }
 
