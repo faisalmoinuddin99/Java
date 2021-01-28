@@ -6,34 +6,38 @@ public class Main {
      * Practice set question chapter - 4
      * */
        /*
-       Question 2
-
-       Algorithm :
-       1. Take a marks from user
-       2. Each subject should have grater than 40% and at least 33% to be passed
-       3. If less than 33% then fail
-        */
+       Question 3
+       */
 
         Scanner sc = new Scanner(System.in) ;
-        System.out.print("Enter your first subject marks:");
-        byte subOne = sc.nextByte();
-        System.out.println("Enter your second subject marks:");
-        byte subTwo = sc.nextByte() ;
-        System.out.println("Enter your third subject marks:");
-        byte subThree = sc.nextByte() ;
+        byte count = sc.nextByte() ;
 
-        float avg = ( subOne + subTwo + subThree ) / 3.0f ;
-        double total = subOne + subTwo + subThree ;
-        double percentage = (total / 300) * 100 ;
+        switch (count){
+            case 1 :
+                System.out.println("Monday");
+                break;
+            case 2 :
+                System.out.println("Tuesday");
+            break;
 
-        if (percentage > 40 && subOne > 33 && subTwo > 33 && subThree > 33) {
-            System.out.println("Student is pass");
-        } else {
-            System.out.println("Student is fail");
+            case 3 :
+                System.out.println("Wednesday");
+                break;
+            case 4 :
+                System.out.println("Thursday");
+                break;
+            case 5 :
+                System.out.println("Friday");
+                break;
+            case 6 :
+                System.out.println("Saturday");
+                break;
+            case 7 :
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Please enter the valid day");
         }
-        System.out.format("Student percentage %.2f",percentage);
-        System.out.println("\n");
-        System.out.format("Total marks %.0f / 300",total);
     }
 }
 
