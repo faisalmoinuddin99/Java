@@ -6,26 +6,31 @@ public class Main {
 Practice Set 5
 
 TODO:
-    Find the factorial of given number
+    sum of first n even number using while
 
-    n = 5
-    5 * 4 * 3 * 2 * 1 = 120
+
  */
         Scanner sc = new Scanner(System.in) ;
         System.out.print("Enter the number:");
         int number = sc.nextInt() ;
-        int fact = 1;
-        for (int i = number; i>=1; i--){
-            fact = fact * i;
+        int i = 0;
+        int sum = 0;
+        while(i <= number){
+            if (i % 2 == 0) {
+                System.out.print(i + " ");
+                sum += i ;
+            }
+            i++;
         }
-        System.out.println(fact);
+        System.out.print("\n");
+        System.out.println("Sum: "+sum);
     }
 }
 
 /*
 OUTPUT:
 
-Enter the number:5
-120
-
+Enter the number:7
+0 2 4 6
+Sum: 12
  */
