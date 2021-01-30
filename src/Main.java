@@ -6,35 +6,26 @@ public class Main {
 Practice Set 5
 
 TODO:
-    sum of first n even number:
-    even number = 0, 2, 4, 6, 8, ....
-    sum = 2+4+6+8 = 20
+    Find the factorial of given number
+
+    n = 5
+    5 * 4 * 3 * 2 * 1 = 120
  */
         Scanner sc = new Scanner(System.in) ;
         System.out.print("Enter the number:");
         int number = sc.nextInt() ;
-        int evenNumber = 0;
-        int sum = 0 ;
-        System.out.println("Even Number:");
-        for (int i = 0; i < number; i++){
-            if ( i % 2 == 0 ){
-                evenNumber =  i;
-                System.out.print(evenNumber + " ");
-                sum += evenNumber ;
-
-            }
+        int fact = 1;
+        for (int i = number; i>=1; i--){
+            fact = fact * i;
         }
-        System.out.print("\n");
-        System.out.println("Sum: " + sum);
+        System.out.println(fact);
     }
 }
 
 /*
 OUTPUT:
 
-Enter the number: 10
-Even Number:
-0 2 4 6 8
-Sum: 20
+Enter the number:5
+120
 
  */
