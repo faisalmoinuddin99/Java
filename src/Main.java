@@ -3,27 +3,20 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 /*
-Practice Set 5
-
-TODO:
-some of the random question on linked in
-
+Chapter 6:  Arrays is a collection of similar type of data
  */
 
+        int [] marks = new int[5];
+        marks[0] = 100;
+        marks[1] = 70 ;
+        marks[4] = 80;
+        marks[5] = 60 ; // Index 5 out of bounds for length 5
 
-        String str = "abcde" ;
-        System.out.println(str.trim());
-        System.out.println(str.toUpperCase()) ;
-        System.out.println(str.substring(3,4));
-        System.out.println(str);
+        System.out.println(marks[2]); // 0
+        System.out.println(marks[1]); // 70
+       // System.out.println(marks[5]);  Index 5 out of bounds for length 5
+
     }
 
 }
 
-/*
-OUTPUT:
-
-Enter the number:7
-0 2 4 6
-Sum: 12
- */
