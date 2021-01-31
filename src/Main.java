@@ -6,9 +6,9 @@ public class Main {
         find max element present in the array
      */
 
-        int[] arr = {10, 5, 20, 3,7,90};
+        int[] arr = {10, 5, -20, 3,7,-90};
         int len = arr.length;
-        int max = 0;
+        int max = Integer.MIN_VALUE;
 
         for (int i = 0; i < len; i++) {
             if (max < arr[i]) {
@@ -20,7 +20,8 @@ public class Main {
 }
 
 /*
-OUTPUT:  Max 90
+OUTPUT:  Max 10
+
 
 
 
