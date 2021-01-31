@@ -3,21 +3,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        // find array length
-        int [] marks = {90,78,56,8,65,45};
-        int len = marks.length ;
-        System.out.println(marks[1]);
-        System.out.println(len);
+       /*
+       Traversing array elements
+        */
 
-        // floating point array
-        float[] marks1 = {90.5f,78.78f,56.09f,8.7f,65.9f,45.6f};
-        System.out.println(marks1[3]);
+        int[] marks = {10,20,30,405,60,708,45,34} ;
+        for (int i = 0; i < marks.length; i++){
+            System.out.print(marks[i] + " ");
 
-        //string array
-        String[] students = {"faisal", "harry", "rohan", "shubham"};
-        int studentLength = students.length;
-        System.out.println(studentLength);
-        System.out.println(students[2]);
+        }
     }
 }
 
