@@ -6,25 +6,18 @@ public class Main {
 Practice Set 5
 
 TODO:
-    sum of first n even number using while
-
+some of the random question on linked in
 
  */
-        Scanner sc = new Scanner(System.in) ;
-        System.out.print("Enter the number:");
-        int number = sc.nextInt() ;
-        int i = 0;
-        int sum = 0;
-        while(i <= number){
-            if (i % 2 == 0) {
-                System.out.print(i + " ");
-                sum += i ;
-            }
-            i++;
-        }
-        System.out.print("\n");
-        System.out.println("Sum: "+sum);
+
+
+        String str = "abcde" ;
+        System.out.println(str.trim());
+        System.out.println(str.toUpperCase()) ;
+        System.out.println(str.substring(3,4));
+        System.out.println(str);
     }
+
 }
 
 /*
