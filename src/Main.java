@@ -5,16 +5,10 @@ public class Main {
 /*
 Chapter 6:  Arrays is a collection of similar type of data
  */
-
-        int [] marks = new int[5];
-        marks[0] = 100;
-        marks[1] = 70 ;
-        marks[4] = 80;
-        marks[5] = 60 ; // Index 5 out of bounds for length 5
-
-        System.out.println(marks[2]); // 0
-        System.out.println(marks[1]); // 70
-       // System.out.println(marks[5]);  Index 5 out of bounds for length 5
+    // Declare + initialize
+        int[] marks = {50,40,30,51,60} ;
+        int len = marks.length;
+        System.out.println(len);
 
     }
 
