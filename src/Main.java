@@ -3,24 +3,28 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
     /*
-        find max element present in the array
+       check whether the array is sorted or not
      */
-
-        int[] arr = {10, 5, -20, 3,7,-90};
-        int len = arr.length;
-        int max = Integer.MIN_VALUE;
-
-        for (int i = 0; i < len; i++) {
-            if (max < arr[i]) {
-                max = arr[i];
-            }
+//    int[] array = {1, 2100, 3, 455, 5, 34, 67} ;
+        int[] array = {1, 2, 3, 4, 5, 34, 67} ;
+    boolean isSorted = true;
+    for (int i = 0; i < array.length - 1; i++){
+        if (array[i] > array[i+1]) {
+            isSorted = false ;
         }
-        System.out.print("Max "+ max);
+    }
+    if (isSorted){
+        System.out.println("Yes, Sorted");
+    } else {
+        System.out.println("No, not Sorted");
+    }
+
     }
 }
 
 /*
-OUTPUT:  Max 10
+OUTPUT:  Yes, Sorted
+
 
 
 
