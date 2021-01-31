@@ -3,20 +3,30 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
     /*
-    Create an array of 5 floats and calculate the sum
+    write a program to find out whether a given integer is present in an array or not
      */
-    float [] myArray = {1.0f,2.1f,3.5f,4.7f,5.8f};
-    float sum = 0f;
-    int length = myArray.length;
-    int i = 0;
-    while(i < length){
-        sum = sum + myArray[i];
-        i++;
-    }
-        System.out.format("The sum of array is %.2f", sum);
+        Scanner sc = new Scanner(System.in);
+        int[] myArrayList = {30,40,50};
+        boolean isPresent = false ;
+        System.out.print("Enter the number: ");
+        int userInput = sc.nextInt() ;
+        for(int i : myArrayList){
+            if(i == userInput) {
+               isPresent = true ;
+
+            }
+        }
+        if (isPresent){
+            System.out.println("Yes, present");
+        } else {
+            System.out.println("No, not present");
+        }
+
     }
 }
 
 /*
-OUTPUT: The sum of array is 17.10
+OUTPUT: Enter the number: 30
+Yes, present
+
  */
