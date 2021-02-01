@@ -3,23 +3,22 @@ import java.util.Scanner;
 public class Main {
 
     /*
-    With Static keyword
+    Without Static keyword
 
-    Theory: static keyword helps you to create and access the
-    methods without creating any object of the class.
-
-    . Which means you can directly call the method in main
-    method.:
+    Theory: if you don't make your methods with static keyword, then for accessing
+    that method in main you have to create an object of your class and then you can
+    call that method.
      */
 
-    static int addition(int x, int y){
+     int addition(int x, int y){
         return  x + y ;
     }
 
     public static void main(String[] args) {
     int a = 10;
     int b = 20;
-    int c = addition(a,b);
+    Main obj = new Main();
+    int c = obj.addition(a,b);
         System.out.println(c); // 30
 
 
