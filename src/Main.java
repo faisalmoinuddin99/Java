@@ -3,42 +3,46 @@ import java.util.Scanner;
 public class Main {
 
     /*
-    Method Overloading
+        Variable Argument (VarArgs)
 
-    . Two or more methods can have same name but different parameters.
-    .  Ek he naam but kaam alag alag
      */
-    static void foo(){
-        System.out.println("I drive a car");
-    }
-
-    // Error : method foo() is already defined in class Main
-    static String foo(){
-        return  "I drive a car" ;
-    }
+//    static int sum(int a, int b) {
+//        return a + b;
+//    }
+//
+//    static int sum(int a, int b, int c){
+//        return a + b + c ;
+//    }
+//
+//    static int sum(int a, int b, int c, int d){
+//        return a + b + c + d ;
+//    }
     /*
-    Note : Method overloading cannot be performed by changing he return type of the method.
+    Instead of creating lots of overloaded function, you can use VarArgs, refer below example
      */
 
-    static void foo(int x){
-        System.out.println("I had fly " + x + " planes");
+    static int sum(int ...arg){
+        // here ...arg is something like this int [] arg
+        int result = 0;
+        for(int a : arg){
+            result += a;
+        }
+        return  result ;
     }
-
-    static void foo(String name, int x){
-        System.out.println("Love you " +  name + " " + x);
-    }
-
     public static void main(String[] args) {
 
-    foo(); // I drive a car
-    foo(10); // I had fly 10 planes
-    foo("Ben",3000); // Love you Ben 3000
+        System.out.println("Sum of 1 and 2 is: " + sum(1,2));
+        System.out.println("Sum of 1, 2 and 3 is: " + sum(1,2,3));
+        System.out.println("Sum of 1, 2, 3, and 4 is: " + sum(1,2,3,4));
     }
-}
+
+    }
+
 
 /*
+OUTPUT:
+Sum of 1 and 2 is: 3
+Sum of 1, 2 and 3 is: 6
+Sum of 1, 2, 3, and 4 is: 10
 
-Arguments are actual
-. eg foo(10) -> here 10 is an argument
-. eg foo(int x) -> here int x is a parameter
  */
