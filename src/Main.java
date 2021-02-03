@@ -2,21 +2,27 @@ import java.util.Scanner;
 
 public class Main {
     /*
-    WAP method to print multiplication table of a
-    number n
+   Write a program using function to print the following
+   pattern
+
+   *
+   **
+   ***
+   ****
+
      */
 
-    static void multiplicationTable(int n, int till){
-        int table = 1;
-        for(int i = 1; i<=till; i++){
-        table = n * i;
-            System.out.format("%d * %d = %d ",n,i,table);
+    static void printPattern(int n){
+        for(int i = 1; i <= n; i++){
+            for(int j = 1; j <= i; j++){
+                System.out.print("*");
+            }
             System.out.print("\n");
         }
-
     }
+
     public static void main(String[] args) {
-    multiplicationTable(4,10);
+    printPattern(4);
     }
 
 }
@@ -25,15 +31,10 @@ public class Main {
 
 OUTPUT :
 
-4 * 1 = 4
-4 * 2 = 8
-4 * 3 = 12
-4 * 4 = 16
-4 * 5 = 20
-4 * 6 = 24
-4 * 7 = 28
-4 * 8 = 32
-4 * 9 = 36
-4 * 10 = 40
+*
+**
+***
+****
+
 
  */
