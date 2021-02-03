@@ -2,27 +2,23 @@ import java.util.Scanner;
 
 public class Main {
     /*
-   Write a program using function to print the following
-   pattern
-
-   *
-   **
-   ***
-   ****
+   Write a recursive function to calculate sum of first n natural number
 
      */
+static int sum(int n){
 
-    static void printPattern(int n){
-        for(int i = 1; i <= n; i++){
-            for(int j = 1; j <= i; j++){
-                System.out.print("*");
-            }
-            System.out.print("\n");
-        }
+    if (n != 0) // termination condition
+        return n + sum(n-1); // Recursion
+     else {
+        return  n; // Back Track
     }
 
+}
+
+
     public static void main(String[] args) {
-    printPattern(4);
+    int x = sum(3);
+        System.out.println("Sum : " + x);
     }
 
 }
