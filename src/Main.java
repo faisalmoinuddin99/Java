@@ -22,7 +22,12 @@ static int sumRec(int n){
         return n + sum(n-1);
     }
 }
-
+/*
+sum(n) = n + sum(n-1)
+sum(3) = 3 + sum(2)
+sum(3) = 3 + 2 + sum(1)
+sum(3) = 3 + 2 + 1
+ */
 
     public static void main(String[] args) {
     int x = sum(3);
