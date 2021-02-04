@@ -2,39 +2,25 @@ import java.util.Scanner;
 
 public class Main {
     /*
-   Write a recursive function to calculate sum of first n natural number
+   Write a recursive function to find fibonacci series
+   0, 1, 1, 2, 3, 5, 8, 13, 21, 34
 
      */
-static int sum(int n){
-
-    if (n != 0) // termination condition
-        return n + sum(n-1); // Recursion
-     else {
-        return  n; // Back Track
+    static  int fib(int n) {
+        if (n==1){
+            return 0;
+        }else if(n==2){
+            return 1;
+        }else {
+            return fib(n-1) + fib(n-2);
+        }
     }
-
-}
-
-static int sumRec(int n){
-    if(n == 1){
-        return 1;
-    }else{
-        return n + sum(n-1);
-    }
-}
-/*
-sum(n) = n + sum(n-1)
-sum(3) = 3 + sum(2)
-sum(3) = 3 + 2 + sum(1)
-sum(3) = 3 + 2 + 1
- */
-
     public static void main(String[] args) {
-    int x = sum(3);
-        System.out.println("Sum : " + x);
 
-        int y = sumRec(4);
-        System.out.println("Sum Rec: " + y);
+        int result = fib(5);
+        System.out.println(result); // 3
+
+
     }
 
 }
