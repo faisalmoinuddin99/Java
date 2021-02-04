@@ -2,28 +2,26 @@ import java.util.Scanner;
 
 public class Main {
     /*
-   Write a recursive function to find fibonacci series
-   0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+   Write a function to find average of a set of number
+   passed as an argument
 
+   Average = Total Sum of all number / Number of Item
      */
-    static  int fib(int n) {
-//        if (n==1){
-//            return 0;
-//        }else if(n==2){
-//            return 1;
-//        }
-        if (n==1 || n==2){
-            return n-1; // here if n = 1 then 1-1 = 0 OR n = 2 then n-1 = 2 - 1 = 1
+    static  int  findAvg(int ...args){
+        int sum = 0;
+        int len = 0;
+        for (int i : args){
+            sum += i;
+            len++;
         }
-        else {
-            return fib(n-1) + fib(n-2);
-        }
+        int avg = sum / len ;
+       // System.out.println("length "+len);
+        return avg ;
     }
     public static void main(String[] args) {
 
-        int result = fib(5);
-        System.out.println(result); // 3
 
+        System.out.println("Average : " + findAvg(10,20,30,40));
 
     }
 
