@@ -5,14 +5,19 @@ public class Main {
     public static void main(String[] args) {
 
         /*
-        Object Oriented Programming tires to map code instruction with real world making the code short
-        and easier to understand.
 
-        WHAT IS OBJECT ORIENTED PROGRAMMING ?
-        -> Solving the problem by creating objects is one of the most popular approaches in programming .
-        This is called Object Oriented Programming.
+       CLASS : A Class is a blueprint / template for creating object
 
-         */
+       OBJECT: Its an instance of a class. Memory is allocate only after object instantiation.
+
+       HOW TO MODEL A PROBLEM IN OOPS ?
+       -> We identify the following :
+
+       Noun -> Class -> Employee
+       Adjective - > Attributes -> name, salary, age
+       Verb -> Methods -> getSalary(), increment()
+
+        */
         System.out.println("Introduction to OOPs");
 
     }
