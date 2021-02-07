@@ -6,16 +6,16 @@ public class Main {
 
         /*
 
-       CLASS : A Class is a blueprint / template for creating object
+       OOPS Terminology :
 
-       OBJECT: Its an instance of a class. Memory is allocate only after object instantiation.
+       1. Abstraction : Hiding Internal Information [ Show only essential info ]
 
-       HOW TO MODEL A PROBLEM IN OOPS ?
-       -> We identify the following :
+       2. Encapsulation : The act of putting various component together [ just like a capsule ]
 
-       Noun -> Class -> Employee
-       Adjective - > Attributes -> name, salary, age
-       Verb -> Methods -> getSalary(), increment()
+       example :- Laptop is a single entity with wifi + speaker  + storage in a single box !
+
+       In java, Encapsulation simply means that the sensitive information / data can be hidden from
+       the user.
 
         */
         System.out.println("Introduction to OOPs");
