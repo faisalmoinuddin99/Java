@@ -41,6 +41,18 @@ class Rectangle {
     }
 }
 
+class TommyViceCity {
+    public void hit(){
+        System.out.println("Hitting ...");
+    }
+    public void run(){
+        System.out.println("Running ...");
+    }
+    public void fire(){
+        System.out.println("Firing ...");
+    }
+}
+
 public class Main {
 
     public static void main(String[] args) {
@@ -54,10 +66,16 @@ public class Main {
     s1.setWidth(5);
         System.out.println("Area of Square : " + s1.area());
         System.out.println("Perimeter of Square : " + s1.perimeter());
+
+        TommyViceCity tommy = new TommyViceCity() ;
+        tommy.run();
+        tommy.fire();
+        tommy.hit();
     }
     /*
-    Area of Square :25
-    Perimeter of Square : 20
+    Running ...
+    Firing ...
+    Hitting ...
      */
 
 }
