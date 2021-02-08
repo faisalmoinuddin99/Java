@@ -1,47 +1,38 @@
-
-
+ /*
+ Practice Set
+  */
  class Employee {
-    int id ;
-    String name ;
-    int salary;
+     // properties
+     String name;
+     int salary ;
 
-    public void printDetails(){
-        System.out.println("My id number is : " + id);
-        System.out.println("My name is : " + name);
-    }
-    public void getSalary(){
-        System.out.format("%s salary is %dk",name,salary);
-    }
-}
+     // methods
+
+     public String getName() {
+         return name;
+     }
+
+     public void setName(String name) {
+         this.name = name;
+     }
+
+     public int getSalary(){
+         return salary ;
+     }
+ }
 public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Custom Class ");
-        Employee faisal = new Employee(); // Instantiating a new Employee Object
-        Employee jhon = new Employee() ;
-        // Setting Attribute
-        faisal.id = 124;
-        faisal.name = "Faisal";
-
-        jhon.id = 13;
-        jhon.name = "Jhon Khandelwal" ;
-        jhon.salary = 50 ;
-        // Printing Attribute
-//        System.out.println(faisal.id + " " + faisal.name );
-        faisal.printDetails();
-        jhon.printDetails();
-        jhon.getSalary();
-
-        /*
-        Custom Class
-My id number is : 124
-My name is : Faisal
-My id number is : 13
-My name is : Jhon Khandelwal
-Jhon Khandelwal salary is 50k
-         */
-
+Employee e1 = new Employee() ;
+        e1.name = "Faisal";
+        e1.salary = 500000 ;
+        System.out.println(e1.name);
+        System.out.println(e1.getSalary());
+        Employee e2 = new Employee() ;
+        e2.setName("Rahul");
+        System.out.println(e2.getName());
+        System.out.println(e2.getSalary());
     }
 
 }
