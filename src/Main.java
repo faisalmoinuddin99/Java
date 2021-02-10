@@ -1,46 +1,33 @@
+class Rectangle {
+    private int length;
+    private int width ;
 
-class Employee {
-    // Data Hiding
-    private   int id ;
-    private  String name ;
-
-    public int getId() {
-        return id;
+    public int getLength() {
+        return length;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setLength(int length) {
+
+        this.length = length;
     }
 
-    public String getName() {
-        return name;
+    public int getWidth() {
+        return width;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setWidth(int width) {
+        this.width = width;
     }
 
-
+    public int getArea(){
+        return this.length * this.width ;
+    }
 }
-public class Main {
-
+public class Main{
     public static void main(String[] args) {
-
-        Employee harry = new Employee();
-//        harry.id = 12;
-//        harry.name = "Harry" ; --> throws an error due to private access modifier
-        harry.setName("CodeWithHarry");
-        System.out.println(harry.getName());
+        Rectangle r1 = new Rectangle();
+        r1.setLength(10);
+        r1.setWidth(2);
+        System.out.println(r1.getArea());
     }
 }
-
-/*
-                        Access Levels
-
-Modifier	    Class	    Package	    Subclass	   World
-public	     Y	           Y	        Y	        Y
-protected    Y	           Y	        Y	        N
-no modifier   Y	           Y	        N	        N
-private	     Y	           N	        N	        N
-
- */
