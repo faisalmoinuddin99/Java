@@ -1,33 +1,37 @@
-class Rectangle {
-    private int length;
-    private int width ;
+class Employee {
+    String name;
+    int id;
 
-    public int getLength() {
-        return length;
+//    public Employee(){
+//        name = "your Name" ;
+//        id = 0 ;
+//    }
+    public String getName() {
+        return name;
     }
 
-    public void setLength(int length) {
-
-        this.length = length;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getWidth() {
-        return width;
+    public int getId() {
+        return id;
     }
 
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public int getArea(){
-        return this.length * this.width ;
+    public void setId(int id) {
+        this.id = id;
     }
 }
-public class Main{
+
+public class Main {
     public static void main(String[] args) {
-        Rectangle r1 = new Rectangle();
-        r1.setLength(10);
-        r1.setWidth(2);
-        System.out.println(r1.getArea());
+        Employee emp1 = new Employee() ;
+        System.out.println(emp1.getName());
+        System.out.println(emp1.getId());
+
+        emp1.setName("Faisal");
+        System.out.println(emp1.getName());
+        emp1.setId(612);
+        System.out.println(emp1.getId());
     }
 }
