@@ -1,37 +1,38 @@
-class Employee {
+/*
+Java Default Constructor
+A constructor is called "Default Constructor" when it doesn't have any parameter.
+
+Syntax of default constructor:
+<class_name>(){}
+
+Q) What is the purpose of a default constructor?
+
+The default constructor is used to provide the default values to the object like 0, null, etc.,
+depending on the type.
+
+Example of default constructor that displays the default values
+
+ */
+class Students {
     String name;
-    int id;
+    int rollNo;
 
-//    public Employee(){
-//        name = "your Name" ;
-//        id = 0 ;
-//    }
-    public String getName() {
-        return name;
+    public Students(){} // Default Constructor
+
+    public void display(){
+        System.out.println("Student name : " + this.name);
+        System.out.println("Student roll_no : " + this.rollNo);
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 }
-
-public class Main {
+public class  Main {
     public static void main(String[] args) {
-        Employee emp1 = new Employee() ;
-        System.out.println(emp1.getName());
-        System.out.println(emp1.getId());
-
-        emp1.setName("Faisal");
-        System.out.println(emp1.getName());
-        emp1.setId(612);
-        System.out.println(emp1.getId());
+        Students s1 = new Students();
+        s1.display();
+        /*
+        Student name : null
+        Student roll_no : 0
+        */
     }
 }
