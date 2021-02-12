@@ -18,28 +18,51 @@ import java.util.Random;
 import java.util.Scanner;
 
 class Game {
-    private int randNumber;
+    private final int randNumber;
+    private int noOfGuesses;
 
     Game(){
         Random rand = new Random();
         this.randNumber = rand.nextInt(11);
         System.out.println(randNumber);
     }
-    public void findNumber(){
+
+    public boolean isCorrectNumber(int userInput){
+        return userInput == this.randNumber;
+    }
+
+    public void takeUserInput(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Guess the number:");
-        int userInput = sc.nextInt();
-        if (userInput == this.randNumber){
-            System.out.println("win");
-        }else{
-            System.out.println("loss");
+        while(true) {
+            System.out.println("Guess the number:");
+            int userInput = sc.nextInt();
+            boolean isTrue = false;
+
+
+            isTrue = isCorrectNumber(userInput);
+
+            System.out.println(isTrue);
+
+            if (!isTrue) {
+                noOfGuesses += 1;
+
+            } else {
+                System.out.println("Number of Guesses: " + noOfGuesses);
+            break;
+            }
         }
+
+    }
+
+    public void runGame(){
+
+            takeUserInput();
     }
 }
 
 public class Main {
     public static void main(String[] args) {
         Game g1 = new Game();
-        g1.findNumber();
+        g1.runGame();
     }
 }
