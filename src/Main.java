@@ -24,7 +24,7 @@ class Game {
     Game(){
         Random rand = new Random();
         this.randNumber = rand.nextInt(11);
-        System.out.println(randNumber);
+//        System.out.println(randNumber);
     }
 
     public boolean isCorrectNumber(int userInput){
@@ -32,6 +32,25 @@ class Game {
     }
 
     public void takeUserInput(){
+
+        gameLogic();
+
+    }
+    public void runGame(){
+
+        takeUserInput();
+    }
+    public void checkUserInput(int userInput){
+        if (userInput > this.randNumber){
+            System.out.println("You Entered greater number");
+        } else if(userInput < this.randNumber){
+            System.out.println("You Entered the less number");
+        } else{
+            System.out.println("Success ");
+        }
+    }
+
+    public void gameLogic(){
         Scanner sc = new Scanner(System.in);
         while(true) {
             System.out.println("Guess the number:");
@@ -41,23 +60,22 @@ class Game {
 
             isTrue = isCorrectNumber(userInput);
 
-            System.out.println(isTrue);
+//            System.out.println(isTrue);
 
+            checkUserInput(userInput);
             if (!isTrue) {
                 noOfGuesses += 1;
 
             } else {
                 System.out.println("Number of Guesses: " + noOfGuesses);
-            break;
+                break;
             }
         }
-
     }
 
-    public void runGame(){
 
-            takeUserInput();
-    }
+
+
 }
 
 public class Main {
@@ -66,3 +84,22 @@ public class Main {
         g1.runGame();
     }
 }
+
+/*
+Guess the number:
+4
+You Entered the less number
+Guess the number:
+5
+You Entered the less number
+Guess the number:
+8
+You Entered the less number
+Guess the number:
+9
+You Entered the less number
+Guess the number:
+10
+Success
+Number of Guesses: 4
+ */
