@@ -36,6 +36,29 @@ class Cylinder {
     }
 }
 
+ class  Rectangle {
+    private  int length;
+    private int breadth;
+
+     public Rectangle() {
+         this.length = 3;
+         this.breadth = 5 ;
+     }
+
+     public Rectangle(int length, int breadth) {
+         this.length = length;
+         this.breadth = breadth;
+     }
+
+     public int getLength() {
+         return length;
+     }
+
+     public int getBreadth() {
+         return breadth;
+     }
+ }
+
 public class Main{
     public static void main(String[] args) {
 Cylinder c1 = new Cylinder(2,5) ;{
@@ -46,6 +69,9 @@ Cylinder c1 = new Cylinder(2,5) ;{
             System.out.println(c1.surfaceAreaOfCylinder()); // 87.96459430051421
             System.out.println(c1.volumeOfCylinder()); // 62.83185307179586
 
+            Rectangle r1 = new Rectangle(2,4);
+            System.out.println(r1.getBreadth()); // 4
+            System.out.println(r1.getLength()); // 2
         }
     }
 }
