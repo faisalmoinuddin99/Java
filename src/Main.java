@@ -1,42 +1,36 @@
-public class Main {
-    public static void main(String[] args) {
-        String [] arr = {"abc", "xyz", "uvw", "efg"};
-        int length = arr.length;
-        int start = 0;
-        int end = length - 1;
-        System.out.println("Before Reverse: ");
+/*
+Practice Set 9
+ */
 
-        printArray(arr);
+class Cylinder {
+    private int radius;
+    private int height ;
 
-        System.out.println();
-        System.out.println("After Reverse: ");
-
-        ReversingArray(arr,start,end);
+    public int getRadius() {
+        return radius;
     }
 
-    public static void printArray(String[] a){
-        for (String i : a){
-            System.out.print(i + " ");
-        }
+    public void setRadius(int radius) {
+        this.radius = radius;
     }
 
-    public static void ReversingArray(String[] a, int start, int end){
-        String temp ;
-        int size = a.length;
-        while(start < end){
-            temp = a[start];
-            a[start] = a[end];
-            a[end] = temp;
-            start++;
-            end--;
-        }
-        printArray(a);
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
     }
 }
 
-/*
-Before Reverse:
-abc xyz uvw efg
-After Reverse
-efg uvw xyz abc
- */
+public class Main{
+    public static void main(String[] args) {
+Cylinder c1 = new Cylinder() ;{
+    c1.setHeight(5);
+    c1.setRadius(2);
+            System.out.println(c1.getHeight()); // 5
+            System.out.println(c1.getRadius()); // 2
+
+        }
+    }
+}
