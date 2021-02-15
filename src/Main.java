@@ -21,6 +21,14 @@ class Cylinder {
     public void setHeight(int height) {
         this.height = height;
     }
+
+    public double surfaceAreaOfCylinder(){
+        return 2 * Math.PI * this.radius * this.height + 2 * Math.PI * Math.pow(this.radius, 2);
+    }
+
+    public double volumeOfCylinder(){
+        return Math.PI * Math.pow(this.radius, 2) * this.height;
+    }
 }
 
 public class Main{
@@ -30,6 +38,8 @@ Cylinder c1 = new Cylinder() ;{
     c1.setRadius(2);
             System.out.println(c1.getHeight()); // 5
             System.out.println(c1.getRadius()); // 2
+            System.out.println(c1.surfaceAreaOfCylinder()); // 87.96459430051421
+            System.out.println(c1.volumeOfCylinder()); // 62.83185307179586
 
         }
     }
