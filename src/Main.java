@@ -1,45 +1,45 @@
-class GrandParent {
-    int land ;
-    public GrandParent() {
-        System.out.println("25 acer land");
+class Base {
+    public Base(){
+        System.out.println("I am base class Constructor");
     }
-    public GrandParent(int son ){
-       land =  25 / son ;
-        System.out.println("Overloaded GrandParent Constructor " +
-                "Divide the land : " + land);
+    public Base(int x){
+        System.out.println("Base Overloaded Constructor with value of x: " + x);
     }
 }
 
-class Parent extends GrandParent{
-   int cars ;
-    public Parent() {
-        //super(4); // Calling the Overloaded Constructor
-        /*
-        if super() is empty then its call the normal constructor
-         */
-        System.out.println("40 Cars");
+class Dervied extends Base{
+    public Dervied(){
+        System.out.println("I am derived class Constructor");
     }
-    public Parent(int children){
-        super(4);
-        cars = 40 / children ;
-        System.out.println("Parent Overloaded Constructor " +
-                "Car is divided equally to all the kids " + cars);
+    public Dervied(int x, int y){
+        super(x);
+        System.out.println("Derived Overloaded Constructor with value of  y :" + y);
     }
 }
-
-class Child extends Parent {
-    public Child() {
-        super(2);
-        System.out.println("I have an iPhone");
+class childOfDervied extends Dervied{
+    public childOfDervied(){
+        System.out.println("I am child of derived class Constructor");
     }
-    public Child(int x, int y){
-        System.out.println("Child's Overloaded Constructor Value of x and y " + x +  " " + y);
+    public childOfDervied(int x, int y, int z){
+        super(x,y);
+        System.out.println("child of derived Overloaded Constructor with value of z:" + z);
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-//        Child c1 = new Child();
-        Child c = new Child(4,5);
+      // childOfDervied c1 = new childOfDervied();
+       /*
+       OUTPUT:
+        I am base class Constructor
+        I am derived class Constructor
+        I am child of derived class Constructor
+        */
+        childOfDervied c = new childOfDervied(10,20,30);
+        /*
+        Base Overloaded Constructor with value of x: 10
+        Derived Overloaded Constructor with value of  y :20
+        child of derived Overloaded Constructor with value of z:30
+         */
     }
 }
