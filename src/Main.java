@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /*
 Problem Statement :
 
@@ -7,16 +9,33 @@ Properties : Array to store the Available books,
 Array to store the issued books
  */
 class Library {
-    public void addBook(){
+    public  String[] addBook(String[] books){
+        String[] addMoreBooks = new String[books.length+1];
 
+        // copy the content of old array
+        for(int content = 0; content < books.length; content++){
+            addMoreBooks[content] = books[content];
+        }
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Add new Book: ");
+        addMoreBooks[addMoreBooks.length-1] = sc.nextLine() ;
+
+        return addMoreBooks ;
     }
-    public void issueBook(){
-
+    public void display(String[] books){
+        for(String i : books){
+            System.out.println(i);
+        }
     }
-    public void returnBook(){
+}
 
-    }
-    public void showAvailableBooks(){
-
+public class Main {
+    public static void main(String[] args) {
+        Library l = new Library();
+        String[] books = {""};
+        books = l.addBook(books);
+        books = l.addBook(books);
+        l.display(books);
     }
 }
