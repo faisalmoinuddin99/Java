@@ -6,8 +6,17 @@ Methods : addBook, issueBook, returnBook, showAvailableBooks
 Properties : Array to store the Available books,
 Array to store the issued books
  */
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Online Library System");
+class Library {
+    public void addBook(){
+
+    }
+    public void issueBook(){
+
+    }
+    public void returnBook(){
+
+    }
+    public void showAvailableBooks(){
+
     }
 }
