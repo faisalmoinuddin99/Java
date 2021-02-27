@@ -1,42 +1,35 @@
 /*
-CHAPTER 10 - Practice Set
- */
+Problem 2
+*/
 
-class Circle {
-    private int radius;
+class Rectangle {
 
-    public void setRadius(int radius) {
-        this.radius = radius;
+    public int length;
+    public int width;
+
+    Rectangle(int len, int wid){
+        this.length = len;
+        this.width = wid ;
     }
-    public double AreaOfCircle(){
-        return  Math.PI * Math.pow(this.radius,2) ;
-    }
-    public double perimeterOfCircle(){
-        return 2 * Math.PI * this.radius;
+    public double area(){
+        return this.length * this.width ;
     }
 }
-class Cylinder extends Circle{
-    private int height;
-
-    public void setHeight(int height) {
-        this.height = height;
+class Cuboid extends Rectangle {
+    public int height ;
+    Cuboid(int len, int wid, int h) {
+        super(len, wid);
+        this.height = h;
     }
     public double volume(){
-        return AreaOfCircle() * this.height;
+        return this.length * this.width * this.height ;
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Cylinder cylinder = new Cylinder();
-        cylinder.setRadius(4);
-        cylinder.setHeight(5);
-        System.out.println(cylinder.AreaOfCircle());
-        System.out.println(cylinder.volume());
+        Cuboid cuboid = new Cuboid(2,4,5);
+        System.out.println(cuboid.volume()); // 40.0
+        System.out.println(cuboid.area()); // 8.0
     }
 }
-/*
-Output :
-50.26548245743669
-251.32741228718345
- */
