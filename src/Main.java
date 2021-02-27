@@ -1,49 +1,42 @@
-class Phone {
-    public void greet (){
-        System.out.println("Good Morning...");
-    }
-    public void on(){
-        System.out.println("Phone is booting.....");
-    }
+/*
+CHAPTER 10 - Practice Set
+ */
 
-    public void showTime(){
-        System.out.println("its 8 pm...");
+class Circle {
+    private int radius;
+
+    public void setRadius(int radius) {
+        this.radius = radius;
     }
-    public void call(){
-        System.out.println("Ringing ....");
+    public double AreaOfCircle(){
+        return  Math.PI * Math.pow(this.radius,2) ;
+    }
+    public double perimeterOfCircle(){
+        return 2 * Math.PI * this.radius;
     }
 }
-class SmartPhone extends Phone {
-    public void on(){
-        System.out.println("Smart Phone is booting...");
+class Cylinder extends Circle{
+    private int height;
+
+    public void setHeight(int height) {
+        this.height = height;
     }
-    public void camera(){
-        System.out.println("click images..");
-    }
-    public void call(){
-        System.out.println("Smart phone calling ...");
+    public double volume(){
+        return AreaOfCircle() * this.height;
     }
 }
 
-public class Main{
+public class Main {
     public static void main(String[] args) {
-
-        // Phone obj = new Phone(); // Allowed
-       // SmartPhone obj = new SmartPhone() ; // Allowed
-        // SmartPhone b = new Phone() ; Not Allowed
-
-        Phone obj = new SmartPhone(); // Allowed Run time Polymorphism
-        obj.on(); // Smart Phone is booting...
-        obj.call(); // Smart phone calling ...
-
-
-        // obj.camera();  Error [ Not Allowed ]
-        /* java: cannot find symbol
-        symbol:   method camera()
-        location: variable obj of type Phone
-         */
-
-        obj.showTime();
-
+        Cylinder cylinder = new Cylinder();
+        cylinder.setRadius(4);
+        cylinder.setHeight(5);
+        System.out.println(cylinder.AreaOfCircle());
+        System.out.println(cylinder.volume());
     }
 }
+/*
+Output :
+50.26548245743669
+251.32741228718345
+ */
