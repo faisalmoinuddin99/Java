@@ -12,7 +12,13 @@ interface Media {
     void watchYouTube(); // abstract method
 }
 
-class Apple implements Phone, Media{
+interface Internet {
+    default void chrome(){
+        System.out.println("Google");
+    }
+}
+
+class Apple implements Phone, Media, Internet{
 
     @Override
     public void openCamera() {
@@ -43,6 +49,7 @@ public class Main {
         System.out.println("Apple[class] ref: " + iphone11.price); // 50
         iphone11.onRadio(); // Playing radio
         iphone11.watchYouTube(); // Gaming Videos
+        iphone11.chrome(); // Google
 
     }
 }
