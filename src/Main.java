@@ -1,55 +1,95 @@
-interface Phone {
-    int price = 50;
-    void openCamera();
-    void clickPhoto();
+/*
+DEFAULT  METHODS:
+ */
+
+interface Camera {
+    void takeSnap();
+    void recordVideo();
+
+    private void zoomIn(){
+        System.out.println("Zooming IN....");
+    }
+    default void record4kVideo(){
+        zoomIn();
+        System.out.println("Record basic 4k video");
+    }
+
+}
+interface wifi {
+    String[] getNetworks();
+    void connectingToNetwork(String network);
 }
 
-interface Media {
-    default void onRadio() // Default method
-    {
-        System.out.println("Playing radio");
+interface GPS {
+    void setLocation(String location);
+    void getLocation();
+}
+class CellPhone{
+
+    void callNumber(int number){
+        System.out.println("Calling to " + number);
     }
-    void watchYouTube(); // abstract method
+
+    void pickCall(){
+        System.out.println("Connecting....");
+    }
 }
 
-interface Internet {
-    default void chrome(){
-        System.out.println("Google");
-    }
-}
-
-class Apple implements Phone, Media, Internet{
+class SmartPhone extends CellPhone implements  Camera, wifi{
 
     @Override
-    public void openCamera() {
-        System.out.println("opening camera");
+    public void takeSnap() {
+        System.out.println("Picture Clicked");
     }
 
     @Override
-    public void clickPhoto() {
-        System.out.println("clicked photo");
+    public void recordVideo() {
+        System.out.println("Video Recording Started");
     }
-
-
 
     @Override
-    public void watchYouTube() {
-        System.out.println("Gaming Videos");
+    public String[] getNetworks() {
+        System.out.println("Getting list of networks:");
+        String [] networkList = {"Mayank4G", "Anjali5G","Airtel2G"};
+        return networkList;
     }
+
+    @Override
+    public void connectingToNetwork(String network) {
+
+    }
+//    @Override
+//    public void record4kVideo(){
+//        System.out.println("Record 4k video with addition features");
+//    }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Phone p = new Apple(); // Phone Reference pointing to Apple Object
-        p.clickPhoto(); // clicked photo
-        p.openCamera(); //
-        System.out.println("Phone[interface] ref: "+ p.price); // 50
+        SmartPhone samsung = new SmartPhone() ;
+        samsung.callNumber(100);  // Calling to 100
+        samsung.pickCall(); // Connecting....
 
-        Apple iphone11 = new Apple();
-        System.out.println("Apple[class] ref: " + iphone11.price); // 50
-        iphone11.onRadio(); // Playing radio
-        iphone11.watchYouTube(); // Gaming Videos
-        iphone11.chrome(); // Google
+        samsung.takeSnap(); // Picture Clicked
+        samsung.recordVideo(); // Video Recording Started
+
+       String[] arr =  samsung.getNetworks();
+       for(String network : arr){
+           System.out.println(network);
+       }
+       /*
+       Getting list of networks:
+        Mayank4G
+        Anjali5G
+        Airtel2G
+        */
+       samsung.record4kVideo(); // Default Method
+
+        /*
+        Zooming IN....
+        Record basic 4k video
+         */
+
 
     }
 }
