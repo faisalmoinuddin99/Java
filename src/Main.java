@@ -90,6 +90,10 @@ public class Main {
         Record basic 4k video
          */
 
+        // Reference Name of Interface
+        Camera nikon = new SmartPhone();
+        nikon.takeSnap(); // Picture Clicked
+        nikon.record4kVideo();
 
     }
 }
