@@ -1,99 +1,48 @@
 /*
-DEFAULT  METHODS:
+Inheritance in Interface
  */
 
-interface Camera {
-    void takeSnap();
-    void recordVideo();
-
-    private void zoomIn(){
-        System.out.println("Zooming IN....");
-    }
-    default void record4kVideo(){
-        zoomIn();
-        System.out.println("Record basic 4k video");
-    }
-
-}
-interface wifi {
-    String[] getNetworks();
-    void connectingToNetwork(String network);
+interface sampleInterface {
+    void meth1();
+    void meth2();
 }
 
-interface GPS {
-    void setLocation(String location);
-    void getLocation();
-}
-class CellPhone{
-
-    void callNumber(int number){
-        System.out.println("Calling to " + number);
+interface childSampleInterface extends sampleInterface {
+    @Override
+    default void meth1() {
+        System.out.println("method 1");
     }
 
-    void pickCall(){
-        System.out.println("Connecting....");
-    }
+    void meth3();
+    void meth4();
 }
 
-class SmartPhone extends CellPhone implements  Camera, wifi{
+class MySampleClass implements childSampleInterface {
 
     @Override
-    public void takeSnap() {
-        System.out.println("Picture Clicked");
+    public void meth2() {
+        System.out.println("Method 2");
     }
 
     @Override
-    public void recordVideo() {
-        System.out.println("Video Recording Started");
+    public void meth3() {
+        System.out.println("Method 3");
     }
 
     @Override
-    public String[] getNetworks() {
-        System.out.println("Getting list of networks:");
-        String [] networkList = {"Mayank4G", "Anjali5G","Airtel2G"};
-        return networkList;
-    }
+    public void meth4() {
 
-    @Override
-    public void connectingToNetwork(String network) {
-
+        System.out.println("Method 4");
     }
-//    @Override
-//    public void record4kVideo(){
-//        System.out.println("Record 4k video with addition features");
-//    }
 }
 
 public class Main {
     public static void main(String[] args) {
-        SmartPhone samsung = new SmartPhone() ;
-        samsung.callNumber(100);  // Calling to 100
-        samsung.pickCall(); // Connecting....
+        MySampleClass msc = new MySampleClass();
 
-        samsung.takeSnap(); // Picture Clicked
-        samsung.recordVideo(); // Video Recording Started
-
-       String[] arr =  samsung.getNetworks();
-       for(String network : arr){
-           System.out.println(network);
-       }
-       /*
-       Getting list of networks:
-        Mayank4G
-        Anjali5G
-        Airtel2G
-        */
-       samsung.record4kVideo(); // Default Method
-
-        /*
-        Zooming IN....
-        Record basic 4k video
-         */
-
-        // Reference Name of Interface
-        Camera nikon = new SmartPhone();
-        nikon.takeSnap(); // Picture Clicked
-        nikon.record4kVideo();
-
+        msc.meth1(); // method 1
+        msc.meth2(); // Method 2
+        msc.meth3(); // Method 3
+        msc.meth4(); // Method 4
     }
 }
